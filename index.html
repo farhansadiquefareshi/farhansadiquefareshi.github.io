@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farhan Sadique | Portfolio</title>
+  <style>
+    :root {
+      --text-main: #f0f6fc;
+      --text-muted: #b1bac4;
+      --accent: #58a6ff;
+      --glass-bg: rgba(13, 17, 23, 0.78);
+      --glass-border: rgba(255, 255, 255, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      color: var(--text-main);
+      line-height: 1.6;
+      min-height: 100vh;
+      background-color: #0d1117;
+      /* New Background Image with dark overlay for readability */
+      background-image: linear-gradient(rgba(10, 14, 20, 0.7), rgba(10, 14, 20, 0.85)),
+                        url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScgstabMFlNizt-FxrPNeKWmVA1ANGq-8rDn--a6mNFKsxubyfpYavH6Q&s=10');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    /* Glassmorphism Header & Sections */
+    header, section {
+      background: var(--glass-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.4rem;
+    }
+
+    .subtitle {
+      color: var(--accent);
+      font-size: 1.15rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .bio {
+      color: var(--text-muted);
+      max-width: 680px;
+      font-size: 1rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1.2rem;
+      padding-left: 0.5rem;
+      border-left: 4px solid var(--accent);
+    }
+
+    /* Project Cards Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card {
+      background: rgba(22, 27, 34, 0.6);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+    }
+
+    .card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .tags span {
+      background: rgba(88, 166, 255, 0.15);
+      color: var(--accent);
+      border: 1px solid rgba(88, 166, 255, 0.3);
+      font-size: 0.78rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+    }
+
+    /* Publications List */
+    .pub-item {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      padding-left: 1rem;
+      border-left: 2px solid rgba(88, 166, 255, 0.4);
+    }
+
+    /* Contact Section Links */
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .contact-links a {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.08);
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      border: 1px solid var(--glass-border);
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .contact-links a:hover {
+      background: var(--accent);
+      color: #0d1117;
+      border-color: var(--accent);
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Farhan Sadique</h1>
+      <div class="subtitle">Electrical &amp; Electronic Engineering &bull; Embedded Systems &amp; PCB Design</div>
+      <p class="bio">
+        I am an Electrical Engineering undergraduate student at the Military Institute of Science and Technology. Naturally curious and eager to expand my knowledge, I am deeply passionate about electronics and approach all my work with diligence and dedication.
+      </p>
+    </header>
+
+    <!-- Featured Projects Section -->
+    <section>
+      <h2>Featured Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>1. Digital Clock on Tang Nano 9K FPGA Board</h3>
+          <p>Implemented custom digital logic and multiplexed display drivers in Verilog to build a functional 6-digit clock system on an FPGA.</p>
+          <div class="tags">
+            <span>Verilog</span>
+            <span>FPGA</span>
+            <span>Tang Nano 9K</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>2. ESP-32 based Water Level Monitoring System</h3>
+          <p>Developed an IoT-enabled remote telemetry setup using an ESP32 microcontroller for real-time liquid level tracking and sensor data logging.</p>
+          <div class="tags">
+            <span>ESP32</span>
+            <span>IoT</span>
+            <span>Embedded C</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>3. PCB Design of a Flight Controller</h3>
+          <p>Engineered schematic capture and multi-layer board layout routing optimized for stability, sensor integration, and compact drone flight control.</p>
+          <div class="tags">
+            <span>KiCad</span>
+            <span>PCB Layout</span>
+            <span>Hardware Design</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications and Research Papers Section -->
+    <section>
+      <h2>Research &amp; Publications</h2>
+      <div class="pub-item">
+        <p><em>Research updates and publication logs will be updated here as ongoing academic work concludes.</em></p>
+      </div>
+    </section>
+
+    <!-- Contact Me Section -->
+    <section>
+      <h2>Contact Me</h2>
+      <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem;">
+        Interested in hardware engineering collaborations, research discussions, or project inquiries? Get in touch below:
+      </p>
+      <div class="contact-links">
+        <a href="mailto:fsfareshi@gmail.com">fsfareshi@gmail.com</a>
+        <a href="https://github.com/farhansadiquefareshi" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/m-farhan-sadique-fareshi-87893a1a9/" target="_blank">LinkedIn</a>
+      </div>
+    </section>
+
+    <footer>
+      &copy; 2026 Farhan Sadique &bull; Hosted on GitHub Pages
+    </footer>
+  </div>
+</body>
+</html>
